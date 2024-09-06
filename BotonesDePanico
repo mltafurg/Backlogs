@@ -1,0 +1,231 @@
+import java.util.Scanner;
+
+public class BotonesDePanico {
+    public static void main(String[] args) {
+        // Definir variables
+        Scanner scanner = new Scanner(System.in);
+        String correo_electronico = "", contraseña = "", nombre = "", municipio = "";
+        String nombre_contacto = "", parentezco = "";
+        int Opcion_registro, numero_contacto, agregar_contacto;
+        int Opcion_boton, sub_boton, salir_sub_boton, sub_boton1;
+
+        // Datos de entrada
+        System.out.println("¡¡BOTONES DE PANICO!! ---- BIENVENIDO ");
+        System.out.println("Digite [1] si desea iniciar sesión ");
+        System.out.println("Digite [2] si desea inscribirse ");
+        Opcion_registro = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer
+
+        switch (Opcion_registro) {
+            case 1:
+                System.out.println("Digite el correo electrónico ");
+                correo_electronico = scanner.nextLine();
+                System.out.println("Digite su contraseña ");
+                contraseña = scanner.nextLine();
+                break;
+            case 2:
+                System.out.println("Digite su nombre completo");
+                nombre = scanner.nextLine();
+                System.out.println("Digite un Municipio del Área Metropolitana del Valle de Aburrá");
+                municipio = scanner.nextLine();
+                System.out.println("Digite su correo electronico ");
+                correo_electronico = scanner.nextLine();
+                System.out.println("Digite su contraseña");
+                contraseña = scanner.nextLine();
+                break;
+        }
+
+        System.out.println("¡¡¡BIENVENIDO!!!");
+        System.out.println("Digita el botón al que deseas ingresar: ");
+        System.out.println(" [1] = Ayuda Médica ");
+        System.out.println(" [2] = Policia y/o Tránsito ");
+        System.out.println(" [3] = Bomberos ");
+        System.out.println(" [4] = Amigo Mental ");
+        System.out.println(" [5] = Medio Ambiente ");
+        System.out.println(" [6] = Contáctos de Emergencia ");
+        Opcion_boton = scanner.nextInt();
+
+        switch (Opcion_boton) {
+            case 1:
+                int i = 0;
+                while (i <= 1) {
+                    System.out.println("Digita el sub-botón al que deseas ingresar [1-3]");
+                    System.out.println(" [1] = Ambulancia");
+                    System.out.println(" [2] = RCP");
+                    System.out.println(" [3] = Asfixia");
+                    sub_boton = scanner.nextInt();
+
+                    switch (sub_boton) {
+                        case 1:
+                            System.out.println("AMBULANCIA");
+                            System.out.println("Digita el municipio en el que requieres la ambulancia ");
+                            System.out.println(" [1] = Medellín ");
+                            System.out.println(" [2] = Bello ");
+                            System.out.println(" [3] = Itaguí ");
+                            System.out.println(" [4] = Envigado ");
+                            System.out.println(" [5] = Caldas ");
+                            System.out.println(" [6] = Sabaneta ");
+                            System.out.println(" [7] = Copacabana ");
+                            System.out.println(" [8] = Estrella ");
+                            System.out.println(" [9] = Girardota ");
+                            System.out.println(" [10] = Barbosa ");
+                            sub_boton1 = scanner.nextInt();
+
+                            switch (sub_boton1) {
+                                case 1:
+                                    System.out.println("Medellín: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 2:
+                                    System.out.println("Bello: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 3:
+                                    System.out.println("Itaguí: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 4:
+                                    System.out.println("Envigado: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 5:
+                                    System.out.println("Caldas: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 6:
+                                    System.out.println("Sabaneta: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 7:
+                                    System.out.println("Copacabana: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 8:
+                                    System.out.println("Estrella: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 9:
+                                    System.out.println("Girardota: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                                case 10:
+                                    System.out.println("Barbosa: +info de #s de ambulancias privadas y públicas");
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            System.out.println("RCP");
+                            System.out.println("tips sobre RCP");
+                            break;
+                        case 3:
+                            System.out.println("ASFIXIA");
+                            System.out.println("tips sobre asfixia");
+                            break;
+                    }
+
+                    System.out.println("Digita [2] si deseas salir, o [1] si deseas regresar");
+                    salir_sub_boton = scanner.nextInt();
+                    i = salir_sub_boton;
+                }
+                break;
+
+            case 2:
+                System.out.println("POLICIA Y/O TRÁNSITO");
+                i = 0;
+                while (i <= 1) {
+                    System.out.println("Digita el sub-botón al que deseas ingresar [1-4]");
+                    System.out.println(" [1] = Accidente (accidentes automovilísticos)");
+                    System.out.println(" [2] = Problemas automovilísticos (choques)");
+                    System.out.println(" [3] = Problemas sociales");
+                    System.out.println(" [4] = Situación en peligro");
+                    sub_boton = scanner.nextInt();
+
+                    switch (sub_boton) {
+                        case 1:
+                            System.out.println("ACCIDENTE (ACCIDENTES AUTOMOVILISTICOS)");
+                            System.out.println("información de acuerdo al tipo de accidente");
+                            break;
+                        case 2:
+                            System.out.println("PROBLEMAS AUTOMOVILISTICOS (CHOQUES)");
+                            System.out.println("información de acuerdo al tipo de choque");
+                            break;
+                        case 3:
+                            System.out.println("PROBLEMAS SOCIALES");
+                            System.out.println("información de acuerdo al tipo de problema social");
+                            break;
+                        case 4:
+                            System.out.println("SITUACION EN PELIGRO");
+                            System.out.println("información de acuerdo al tipo de peligro");
+                            break;
+                    }
+
+                    System.out.println("Digita [2] si deseas salir o [1] si deseas regresar");
+                    salir_sub_boton = scanner.nextInt();
+                    i = salir_sub_boton;
+                }
+                break;
+
+            case 3:
+                System.out.println("BOMBEROS");
+                i = 0;
+                while (i <= 1) {
+                    System.out.println("Digita el sub-botón al que deseas ingresar [1-3]");
+                    System.out.println(" [1] = Incendios");
+                    System.out.println(" [2] = Desastres naturales");
+                    System.out.println(" [3] = Incidentes específicos");
+                    sub_boton = scanner.nextInt();
+
+                    switch (sub_boton) {
+                        case 1:
+                            System.out.println("INCENDIOS");
+                            System.out.println("información de acuerdo al tipo de incendio");
+                            break;
+                        case 2:
+                            System.out.println("DESASTRES NATURALES");
+                            System.out.println("información de acuerdo al tipo de desastre natural");
+                            break;
+                        case 3:
+                            System.out.println("INCIDENTES ESPECÍFICOS");
+                            System.out.println("información de acuerdo al tipo de incidente");
+                            break;
+                    }
+
+                    System.out.println("Digita [2] si deseas salir o [1] si deseas regresar");
+                    salir_sub_boton = scanner.nextInt();
+                    i = salir_sub_boton;
+                }
+                break;
+
+            case 4:
+                System.out.println("AMIGO MENTAL");
+                i = 0;
+                while (i <= 1) {
+                    System.out.println("Digita el sub-botón al que deseas ingresar [1-4]");
+                    System.out.println(" [1] = ¿Necesitas ayuda psicológica?");
+                    System.out.println(" [2] = ¿Tienes insomnio?");
+                    System.out.println(" [3] = ¿Tienes estrés?");
+                    System.out.println(" [4] = ¿Cómo fue tu semana?");
+                    sub_boton = scanner.nextInt();
+
+                    switch (sub_boton) {
+                        case 1:
+                            System.out.println("¿NECESITAS AYUDA PSICOLÓGICA?");
+                            System.out.println("información de acuerdo al tipo de problema psicológico");
+                            break;
+                        case 2:
+                            System.out.println("¿TIENES INSOMNIO?");
+                            System.out.println("información de cómo vencer el insomnio");
+                            break;
+                        case 3:
+                            System.out.println("¿TIENES ESTRÉS?");
+                            System.out.println("información de cómo vencer el estrés");
+                            break;
+                        case 4:
+                            System.out.println("¿CÓMO FUE TU SEMANA? (GRAFICA EMOCIONAL)");
+                            System.out.println("información que el usuario registra y después es presentado a este");
+                            break;
+                    }
+
+                    System.out.println("Digita [2] si deseas salir o [1] si deseas regresar");
+                   
+
+
+
+
+
+
+   
+ }
+
+}
