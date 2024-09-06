@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class BotonesDePanico {
+public class Main {
     public static void main(String[] args) {
         // Definir variables
         Scanner scanner = new Scanner(System.in);
         String correo_electronico = "", contraseña = "", nombre = "", municipio = "";
         String nombre_contacto = "", parentezco = "";
-        int Opcion_registro, numero_contacto, agregar_contacto;
-        int Opcion_boton, sub_boton, salir_sub_boton, sub_boton1;
+        int Opcion_registro = 0, numero_contacto = 0, agregar_contacto = 0;
+        int Opcion_boton = 0, sub_boton = 0, salir_sub_boton = 0, sub_boton1 = 0;
 
         // Datos de entrada
         System.out.println("¡¡BOTONES DE PANICO!! ---- BIENVENIDO ");
@@ -42,7 +42,7 @@ public class BotonesDePanico {
         System.out.println(" [3] = Bomberos ");
         System.out.println(" [4] = Amigo Mental ");
         System.out.println(" [5] = Medio Ambiente ");
-        System.out.println(" [6] = Contáctos de Emergencia ");
+        System.out.println(" [6] = Contactos de Emergencia ");
         Opcion_boton = scanner.nextInt();
 
         switch (Opcion_boton) {
@@ -218,14 +218,54 @@ public class BotonesDePanico {
                     }
 
                     System.out.println("Digita [2] si deseas salir o [1] si deseas regresar");
-                   
+                    salir_sub_boton = scanner.nextInt();
+                    i = salir_sub_boton;
+                }
+                break;
 
+            case 5:
+                System.out.println("MEDIO AMBIENTE");
+                i = 0;
+                while (i <= 1) {
+                    System.out.println("Digita el sub-botón al que deseas ingresar [1-2]");
+                    System.out.println(" [1] = Ecosistema y/o ser vivo afectado");
+                    System.out.println(" [2] = Tips para cuidar el ambiente");
+                    sub_boton = scanner.nextInt();
 
+                    switch (sub_boton) {
+                        case 1:
+                            System.out.println("¿ECOSISTEMA Y/O SER VIVO AFECTADO?");
+                            System.out.println("números telefónicos para reportar el caso");
+                            break;
+                        case 2:
+                            System.out.println("TIPS PARA CUIDAR EL AMBIENTE");
+                            System.out.println("información para cuidar el medio ambiente");
+                            break;
+                    }
 
+                    System.out.println("Digita [2] si deseas salir o [1] si deseas regresar");
+                    salir_sub_boton = scanner.nextInt();
+                    i = salir_sub_boton;
+                }
+                break;
 
+            case 6:
+                System.out.println("CONTACTOS DE EMERGENCIA");
+                i = 0;
+                while (i <= 4) {
+                    System.out.println("Nombre del contacto de emergencia");
+                    nombre_contacto = scanner.next();
+                    System.out.println("Digite el Parentezco");
+                    parentezco = scanner.next();
+                    System.out.println("Digite el número ");
+                    numero_contacto = scanner.nextInt();
+                    System.out.println("¿Desea agregar otro contacto? Si no desea agregar un nuevo contacto digite [5], de lo contrario digite [1]");
+                    agregar_contacto = scanner.nextInt();
+                    i = agregar_contacto;
+                }
+                break;
+        }
 
-
-   
- }
-
+        scanner.close();
+    }
 }
